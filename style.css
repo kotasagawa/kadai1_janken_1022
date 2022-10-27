@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/* 全体のCSS */
+p:hover, .character1, .character2, .character3 {
+  cursor: pointer;
+}
+
+main {
+  max-width: 100%;
+  height: 100%;
+}
+
+li {
+  color: white;
+}
+
+/* 背景画像 */
+body {
+  height: 100%;
+  background-image: url(img/A02b.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* クリアしたときの画像 */
+
+#mainvisual {
+  position: relative;
+}
+
+#congrats {
+  position: absolute;
+  width: 500px;
+  left: 54%;
+  top: 40%;
+  margin-top: -150px;
+  margin-left: -300px;
+  animation: fadein 1.5s ease-out forwards;
+}
+
+/* ゲームオーバーになったときの画像 */
+#gameover {
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+  margin-left: -300px;
+  animation: fadein 1s ease-out forwards;
+}
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+/* メインテキスト */
+
+#main-text {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#hyouji {
+  margin: 0;
+}
+
+#main-text p {
+  color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: black;
+
+}
+
+/* 宝箱の説明 */
+.description {
+  border: solid 2px white;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: black;
+}
+
+.description ul {
+  padding-left: 20px;
+}
+
+.description p {
+  text-align: center;
+  margin: 0;
+}
+
+.set {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.set:last-child {
+  margin-right: 0;
+}
+
+/* 宝箱 */
+
+.character {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.character1 {
+  width: 100px;
+}
+
+.character2 {
+  width: 100px;
+}
+
+.character3 {
+  width: 100px;
+}
+
+/* 宝箱ホバーさせる */
+.character1, .character2, .character3 {
+	transition: .3s;
+}
+.character1:hover, .character2:hover, .character3:hover {
+	transform: translateY(-6px);
+}
+
+/* ドラゴンボールの枠 */
+
+.count-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.frame {
+  width: 650px;
+  height: 110px;
+  margin-top: 30px;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding-left: 3%;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+}
+
+/* 亀仙人の画像 */
+
+.kazoeru {
+  display: inline-block;
+  padding: 10px;
+  background-color: black;
+  border: solid 2px white;
+  border-radius: 5px;
+}
+
+#kame {
+  width: 120px;
+  position: absolute;
+  left: 85%;
+  top: 60%;
+}
+
+/* 亀仙人の吹き出し */
+.balloon2-right {
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: black;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 2px white;
+  box-sizing: border-box;
+  margin-left: 110px;
+}
+
+.balloon2-right:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-left: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon2-right:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-left: 14px solid white;
+  z-index: 1;
+}
+
+.balloon2-right p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 枠の文字 */
+
+.frame P, #pc_hands {
+  color: white;
+}
+
+.tsuika {
+  width: 50px;
+  margin-right: 5px;
+  padding: 0;
+}
+
+#count, #hyouji {
+  color: white;
+}
+
+.kosuu {
+  color: white;
+  padding-top: 10px;
+}
+
+#saigo {
+  margin: 0;
+}
+
+
